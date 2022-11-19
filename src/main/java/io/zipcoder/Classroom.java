@@ -1,6 +1,7 @@
 package io.zipcoder;
 
 public class Classroom {
+    Student student = new Student();
     Student[] students;
 
     public Classroom() {
@@ -15,13 +16,17 @@ public class Classroom {
     public Object getStudents() {
         return students;
     }
-//    public Double getAverageExamScore(Student[] averageStudentScores) {
-//        double sumOfAverages = 0;
-//        for (int i = 0; i < averageStudentScores.length; i++) {
-//            sumOfAverages += students[i].getStudentScores();
-//            //sumOfAverages += Student.getAverageExamScore(students[i]);
-//        }
-//        return sumOfAverages/students.length;
-//    }
+    public Double getAverageExamScore() {
+        double sumOfAverages = 0;
+        for (int i = 0; i < students.length; i++) {
+            sumOfAverages += Student.getAverageExamScore(students[i].examScores);
+        }
+        return sumOfAverages/students.length;
+    }
+    public void addStudent(Student student) {
+        for (int i = 0; i < students.length; i++) {
+            students[i] = student;
+        }
+    }
 
 }

@@ -3,10 +3,11 @@ package io.zipcoder;
 import java.util.ArrayList;
 
 public class Student {
-    String firstName;
-    String lastName;
-    ArrayList<Double> examScores;
+    public String firstName;
+    public String lastName;
+    public static ArrayList<Double> examScores;
 
+    public Student(){}
     public Student(String firstName, String lastName, ArrayList<Double> examScores) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -39,7 +40,7 @@ public class Student {
 //        }
 //        return studentScores;
 //    }
-    public Integer getNumberOfExamsTaken() {
+    public static Integer getNumberOfExamsTaken() {
         return examScores.size();
     }
 
@@ -51,7 +52,7 @@ public class Student {
         this.examScores.set((examNumber - 1), newScore);
     }
 
-    public Double getAverageExamScore(ArrayList<Double> examScores) {
+    public static Double getAverageExamScore(ArrayList<Double> examScores) {
         double sumOfScores = 0;
         for (int i = 0; i < examScores.size(); i++) {
             sumOfScores += examScores.get(i);
