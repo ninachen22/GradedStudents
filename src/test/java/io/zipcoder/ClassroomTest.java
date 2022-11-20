@@ -23,16 +23,23 @@ public class ClassroomTest {
         System.out.println(output);
     }
     @Test
-    public void testAddStudent() {
+    public void testAddStudent() { //work on this test more
         // : Given
         int maxNumberOfStudents = 1;
         Classroom classroom = new Classroom(maxNumberOfStudents);
         ArrayList<Double> examScores = new ArrayList<>(Arrays.asList(100.0, 150.0, 250.0, 0.0));
         Student student = new Student("Leon", "Hunter", examScores);
         // When
+        Student[] preEnrollment = classroom.getStudents();
         classroom.addStudent(student);
-
+        Student[] postEnrollment = classroom.getStudents();
         // Then
+        String preEnrollmentAsString = Arrays.toString(preEnrollment);
+        String postEnrollmentAsString = Arrays.toString(postEnrollment);
 
+        System.out.println("===========================");
+        System.out.println(preEnrollmentAsString);
+        System.out.println("===========================");
+        System.out.println(postEnrollmentAsString);
     }
 }

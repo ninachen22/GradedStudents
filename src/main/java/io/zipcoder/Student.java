@@ -2,7 +2,7 @@ package io.zipcoder;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student extends Classroom {
     public String firstName;
     public String lastName;
     public static ArrayList<Double> examScores;
