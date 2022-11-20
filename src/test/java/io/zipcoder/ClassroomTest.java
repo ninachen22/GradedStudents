@@ -1,9 +1,11 @@
 package io.zipcoder;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class ClassroomTest {
     @Test
@@ -42,4 +44,15 @@ public class ClassroomTest {
         System.out.println("===========================");
         System.out.println(postEnrollmentAsString);
     }
+//    @Test
+//    public void testGradeBook() {
+//        // Given
+//
+//        //HashMap expected =
+//        // When
+//
+//        HashMap actual = Classroom.getGradeBook();
+//        // Then
+//        Assert.assertEquals(expected, actual);
+//    }
 }
